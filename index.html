@@ -10,16 +10,19 @@
     <div class="converter">
         <h1>Currency Converter</h1>
         <input type="number" id="amount" placeholder="Enter amount">
-        <select id="fromCurrency">
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="GBP">GBP</option>
-        </select>
-        <select id="toCurrency">
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="GBP">GBP</option>
-        </select>
+        <div class="currency-selectors">
+            <select id="fromCurrency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+            </select>
+            <span>to</span>
+            <select id="toCurrency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+            </select>
+        </div>
         <button onclick="convert()">Convert</button>
         <div id="result"></div>
     </div>

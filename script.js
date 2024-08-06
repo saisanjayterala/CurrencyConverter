@@ -7,7 +7,7 @@ function convert() {
         document.getElementById('result').innerText = 'Please enter a valid amount';
         return;
     }
-                                                                                                                        
+
     const conversionRates = {
         'USD': 1,
         'EUR': 0.85,
@@ -16,4 +16,5 @@ function convert() {
 
     const convertedAmount = (amount / conversionRates[fromCurrency]) * conversionRates[toCurrency];
     document.getElementById('result').innerText = `Converted Amount: ${convertedAmount.toFixed(2)} ${toCurrency}`;
+    document.getElementById('result').style.animation = 'highlight 0.5s ease-in-out';
 }
