@@ -4,15 +4,38 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #f0f0f0, #d9d9d9);
+    background: linear-gradient(135deg, #f5af19, #f12711);
     margin: 0;
+    position: relative;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.toggle-button:hover {
+    background-color: #e64a19;
+}
+
+.toggle-button:active {
+    background-color: #d84315;
+    transform: scale(0.98);
 }
 
 .converter {
-    background-color: white;
+    background-color: #fff;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
     animation: fadeIn 1s ease-in-out;
 }
@@ -41,6 +64,7 @@ input, select, button {
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #ffedcc;
 }
 
 input:focus, select:focus, button:focus {
@@ -57,6 +81,8 @@ input:focus, select:focus, button:focus {
 
 .currency-selectors span {
     margin: 0 10px;
+    color: #333;
+    font-weight: bold;
 }
 
 #result {
@@ -69,4 +95,52 @@ input:focus, select:focus, button:focus {
 @keyframes highlight {
     from { background-color: yellow; }
     to { background-color: white; }
+}
+
+button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+button:active {
+    background-color: #d84315;
+    transform: scale(0.98);
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+}
+
+body.dark-mode .converter {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode h1 {
+    color: #fff;
+}
+
+body.dark-mode input, body.dark-mode select, body.dark-mode button {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #777;
+}
+
+body.dark-mode button {
+    background-color: #27ae60;
+}
+
+body.dark-mode button:hover {
+    background-color: #2ecc71;
+}
+
+body.dark-mode button:active {
+    background-color: #1abc9c;
 }
